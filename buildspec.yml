@@ -5,6 +5,7 @@ phases:
     commands:
       - pip install awscli --upgrade --user
       - echo `aws --version`
+      - pip install -r requirements.txt
   build:
     commands:
       - echo Build started on `date`
