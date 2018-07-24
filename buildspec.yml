@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - pip install awscli --upgrade --user
+      - echo `aws --version`
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Building the Docker image...
+      - python myapp/wsgi.py
+  post_build:
+    commands:
+      - echo Dupa
